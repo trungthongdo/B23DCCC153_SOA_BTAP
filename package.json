@@ -1,0 +1,29 @@
+{
+  "name": "lab3-service-connection",
+  "version": "1.0.0",
+  "description": "LAB 3: Kết nối và duy trì kết nối giữa các service (Fee Service & Mock Bank)",
+  "main": "fee-service/server.js",
+  "scripts": {
+    "start:bank": "node bank-service/server.js",
+    "start:fee": "node fee-service/server.js",
+    "test": "node test-scripts/run-all-tests.js",
+    "test:scenario1": "node test-scripts/scenario1-bank-down.js",
+    "test:scenario2": "node test-scripts/scenario2-slow-bank.js",
+    "test:scenario3": "node test-scripts/scenario3-keepalive.js",
+    "test:scenario4": "node test-scripts/scenario4-drop-fail-limit.js"
+  },
+  "keywords": [
+    "microservices",
+    "keep-alive",
+    "idempotency",
+    "timeout",
+    "circuit-breaker",
+    "resilience"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
